@@ -1,6 +1,4 @@
-// ==========================================================
-// Theme toggle (light/dark) with localStorage persistence
-// ==========================================================
+// Theme toggle (light/dark)
 (function () {
   const htmlEl = document.documentElement;
   const toggleBtn = document.getElementById('themeToggle');
@@ -26,10 +24,8 @@
   }
 })();
 
-// ==========================================================
 // Booking page: dynamic price calculation
 // brandSelect -> loads models -> modelSelect + serviceType -> price
-// ==========================================================
 function initBookingForm(pricingData, serviceTypes) {
   const brandSelect = document.getElementById('brand_id');
   const modelSelect = document.getElementById('model_id');
