@@ -5,7 +5,6 @@ if (isAdmin()) { header("Location: ../admin/dashboard.php"); exit; }
 
 $userId = $_SESSION['user_id'];
 
-// Fetch this customer's vehicles (they must add a vehicle first)
 $myVehicles = $conn->query("
     SELECT v.id, v.registration_no, v.brand_id, v.model_id, m.segment, br.name AS brand_name, m.name AS model_name
     FROM vehicles v
@@ -26,7 +25,6 @@ $pricingRes = $conn->query("SELECT model_id, base_price FROM model_pricing");
 $pricingMap = [];
 while ($p = $pricingRes->fetch_assoc()) { $pricingMap[$p['model_id']] = $p['base_price']; }
 
-// Fixed segment-based pricing for Battery / Tyre
 $segmentRes = $conn->query("SELECT segment, battery_price, tyre_price FROM segment_pricing");
 $segmentPricing = [];
 while ($sp = $segmentRes->fetch_assoc()) { $segmentPricing[$sp['segment']] = $sp; }
