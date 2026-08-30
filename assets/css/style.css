@@ -1,8 +1,3 @@
-/* ==========================================================
-   Vehicle Service Portal — Theme v2
-   Palette: Deep Teal + Coral | Signature motif: diagnostic dial
-   ========================================================== */
-
 :root[data-bs-theme="light"] {
   --vsp-bg: #F5FBFA;
   --vsp-surface: #FFFFFF;
